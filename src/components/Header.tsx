@@ -1,5 +1,6 @@
-import {Text, Flex, Input, Icon} from '@chakra-ui/react'
-import { RiSearchLine } from 'react-icons/ri'
+import {Text, Flex, Input, Icon, HStack, Box, Avatar} from '@chakra-ui/react'
+import { RiNotificationLine, RiSearchLine, RiUserAddLine } from 'react-icons/ri'
+import NextLink from 'next/link'
 
 export function Header(){
   return (
@@ -13,15 +14,19 @@ export function Header(){
       px="6"
       align="center"
     >
-      <Text
-        fontSize="3xl"
-        fontWeight="bold"
-        letterSpacing="tight"
-        w="64"
-      >
-        dashgo
-        <Text as="span" color="blue.500" ml="1">.</Text>
-      </Text>
+      <NextLink href={'/dashboard'} passHref>
+        <Text
+          as="a"
+          fontSize="3xl"
+          fontWeight="bold"
+          letterSpacing="tight"
+          w="64"
+        >
+          dashgo
+          <Text as="span" color="blue.500" ml="1">.</Text>
+        </Text>
+      </NextLink>
+      
 
       <Flex
         as="label"
@@ -43,9 +48,29 @@ export function Header(){
       <Flex
         align="center"
         ml="auto"
-        
       >
-        ADSDSD
+        <HStack
+          spacing="8"
+          mx="8"
+          pr="8"
+          py="1"
+          color="gray.300"
+          borderRightWidth={1}
+          borderColor="gray.700"  
+        >
+          <Icon as={RiNotificationLine} fontSize="20"/>
+          <Icon as={RiUserAddLine} fontSize="20"/>
+        </HStack>
+
+        <Flex align="center">
+          <Box mr="4" textAlign="right">
+            <Text>Alex Nascimento</Text>
+            <Text color="gray.300" fontSize="small">
+              alexnascimentoti@gmail.com
+            </Text>
+          </Box>
+          <Avatar size="md" name="Alex Nascimento" src="https://github.com/alexnascimento.png"></Avatar>  
+        </Flex>
       </Flex>
     </Flex>
   )
