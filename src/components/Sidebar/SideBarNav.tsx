@@ -8,13 +8,13 @@ export function SidebarNav(){
     <Stack spacing="12" align="flex-start">
       
       <NavSection title="GERAL">
-        <NavLink uri="dashboard" icon={RiDashboardLine}>Dashboard</NavLink>
-        <NavLink uri="users" icon={RiContactsLine}>Usuários</NavLink>
+        <NavLink href="/dashboard" icon={RiDashboardLine}>Dashboard</NavLink>
+        <NavLink href="/users" icon={RiContactsLine}>Usuários</NavLink>
       </NavSection>
 
       <NavSection title="AUTOMAÇÃO">
-        <NavLink uri="" icon={RiInputMethodLine}>Formulários</NavLink>
-        <NavLink uri="" icon={RiGitMergeLine}>Automação</NavLink>
+        <NavLink href="/forms" icon={RiInputMethodLine}>Formulários</NavLink>
+        <NavLink href="/automation" icon={RiGitMergeLine}>Automação</NavLink>
       </NavSection>
 
     </Stack>
